@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import Navbar from "./src/configs/navbar";
 require('dotenv').config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -56,27 +57,7 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
+    navbar: Navbar as Preset.ThemeConfig['navbar'],
 
     footer: {
       style: 'dark',
@@ -87,9 +68,17 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    
-    themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
   } satisfies Preset.ThemeConfig,
+  
+  scripts: [
+    {
+      src: 'https://static.cloudflareinsights.com/beacon.min.js',
+      async: true,
+      'data-cf-beacon': `{"token": "${process.env.CLOUDFLARE_ANALYTICS_TOKEN}"}`,
+    },
+  ],
+  
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
 };
 
 export default config;
