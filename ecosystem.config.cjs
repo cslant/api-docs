@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: "CSlant Docs",
+      name: "CSlant API Docs",
       script: "npx docusaurus serve",
       env: {
         PORT: 3002,
