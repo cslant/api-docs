@@ -1,4 +1,5 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import { OpenApiSidebar } from "./openApiSidebar";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -28,6 +29,8 @@ const sidebars: SidebarsConfig = {
     },
   ],
    */
+  
+  openApiSidebar: OpenApiSidebar,
 };
 
 export default sidebars;
