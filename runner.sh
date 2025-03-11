@@ -77,6 +77,9 @@ build() {
     echo '  ∟ Installing dependencies...'
     if [ "$INSTALLER" = "yarn" ]; then
       yarn install
+
+      yarn docusaurus clean-api-docs all
+      yarn docusaurus gen-api-docs all
     else
       npm install
     fi
