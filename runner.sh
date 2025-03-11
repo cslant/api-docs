@@ -96,7 +96,7 @@ build() {
   if [ "$ENV" = "prod" ]; then
     node_runner build
   else
-    node_runner dev
+    node_runner start
   fi
   echo ''
 }
