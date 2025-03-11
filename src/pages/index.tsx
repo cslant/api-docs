@@ -20,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/blog">
-            Get Started with Blog API
+            to="https://github.com/cslant">
+            Get Own Github
           </Link>
         </div>
       </div>
