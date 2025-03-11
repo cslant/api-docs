@@ -88,6 +88,27 @@ build() {
       npm update
     fi
   fi
+
+  echo '  ∟ INSTALLER build...'
+  if [ "$ENV" = "prod" ]; then
+    node_runner build
+  else
+    node_runner dev
+  fi
+  echo ''
+}
+
+node_runner() {
+  echo '🏃‍♂️ Running node...'
+
+  cd "$API_DOCS_DIR" || exit
+
+  if [ "$INSTALLER" = "yarn" ]; then
+    yarn "$@"
+  else
+    npm run "$@"
+  fi
+  echo ''
 }
 
 worker() {
