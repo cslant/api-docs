@@ -21,6 +21,17 @@ yarn add docusaurus-theme-openapi-docs
 
 ### Local Development
 
+#### Generating OpenAPI Docs
+
+To generate all OpenAPI docs, run the following command from the root directory of your project:
+
+```
+yarn docusaurus clean-api-docs all
+yarn docusaurus gen-api-docs all
+```
+
+#### Start
+
 ```
 yarn start
 ```
