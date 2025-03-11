@@ -3,6 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import Navbar from "./src/configs/navbar";
 import PrismConfig from "./src/configs/prism";
+import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
+
 require('dotenv').config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -83,7 +85,7 @@ const config: Config = {
             sidebarOptions: {
               groupPathsBy: "tag",
             },
-          },
+          } satisfies OpenApiPlugin.Options,
         },
       },
     ],
