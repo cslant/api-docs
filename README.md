@@ -1,6 +1,18 @@
-# Website
+# CSlant Api Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This project is a documentation site for the CSlant API. It is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+
+All OpenAPI docs are generated using the OpenAPI Generator CLI. The generated files are then copied to the `api-docs` directory in the root of the project.
+
+The OpenAPI docs are then rendered using the Docusaurus Plugin OpenAPI Docs and Docusaurus Theme OpenAPI Docs.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
+- [OpenAPI Generator](https://openapi-generator.tech/docs/installation)
+- Docusaurus Plugin OpenAPI Docs
+- Docusaurus Theme OpenAPI Docs
 
 ### Installation
 
