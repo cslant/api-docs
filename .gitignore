@@ -25,6 +25,7 @@ package-lock.json
 yarn.lock
 
 .env
+.env.*
 .yarn
 .pnp.*
 docs
