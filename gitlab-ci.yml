@@ -1,0 +1,15 @@
+stages:
+  - build
+
+variables:
+  GIT_STRATEGY: none
+
+build:
+  stage: build
+  tags:
+    - csl2
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  script:
+    - cd $API_DOCS_REPO_PATH
+    - ./runner.sh a
