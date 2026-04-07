@@ -5,3 +5,11 @@ export const CSlantBlogConfig = {
         groupPathsBy: "tag",
     },
 };
+
+export const CSlantDailyTipsConfig = {
+    outputDir: "docs/daily-tips",
+    specPath: `${process.env.OPENAPI_DOCS_DAILY_TIPS_URL}`,
+    sidebarOptions: {
+        groupPathsBy: "tag",
+    },
+};
