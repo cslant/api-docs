@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 import Navbar from "./src/configs/navbar";
 import PrismConfig from "./src/configs/prism";
 import type * as OpenApiPlugin from "docusaurus-plugin-openapi-docs";
-import { CSlantBlogConfig } from "./src/configs/openApiPlugins";
+import { CSlantBlogConfig, CSlantDailyTipsConfig } from "./src/configs/openApiPlugins";
 
 require('dotenv').config();
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -81,6 +81,7 @@ const config: Config = {
         docsPluginId: "classic",
         config: {
           blog: CSlantBlogConfig satisfies OpenApiPlugin.Options,
+          dailyTips: CSlantDailyTipsConfig satisfies OpenApiPlugin.Options,
         },
       },
     ],
