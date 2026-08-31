@@ -17,6 +17,11 @@ const Navbar = {
             position: "left",
             to: "/docs/category/blog-api",
         },
+        {
+            label: "Daily Tips API",
+            position: "left",
+            to: "/docs/category/daily-tips-api",
+        },
         
         {
             href: 'https://github.com/cslant',
